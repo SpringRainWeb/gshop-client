@@ -1,29 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
+    <footer-guide v-show="this.$route.meta.showFooter"></footer-guide>
   </div>
 </template>
+<script>
+import footerGuide from './components/footerGuide'
+export default {
+  components:{
+    footerGuide
+  }
+}
+</script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html{
+  font-size: calc(10000vw / 375)
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body{
+  font-size: 0.16rem;
+  color: #424242;
+}
+#app{
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.cube-dialog-btn_highlight {
+    color: #1dd3da;
 }
 </style>
