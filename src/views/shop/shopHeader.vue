@@ -78,12 +78,17 @@
           <div class="discount-detail">
             <i class="cubeic-close" @click="closeModel('discount')"></i>
             <p class="detail-title">优惠活动</p>
-            <ul class="discount-content">
-              <li v-for="(item,index) in info.supports" :key="index">
-                <span class="mini-tag" :style="{backgroundColor:item.type == 2 ? '#ff922b' :'#1dd3da'}">{{item.name}}</span>
-                <span class="activity-content ellipsis">{{item.content}}</span>
-              </li>
-            </ul>
+            <div class="discount-swiper">
+              <ul class="discount-content">
+                <li v-for="(item,index) in info.supports" :key="index">
+                  <span
+                    class="mini-tag"
+                    :style="{backgroundColor:item.type == 2 ? '#ff922b' :'#1dd3da'}"
+                  >{{item.name}}</span>
+                  <span class="activity-content ellipsis">{{item.content}}</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </transition>
@@ -93,6 +98,7 @@
 
 <script>
 import { mapState } from "vuex";
+import BScroll from "better-scroll";
 
 export default {
   name: "shopHeader",
@@ -118,7 +124,7 @@ export default {
     ...mapState(["info"])
   },
   methods: {
-    goBack(){
+    goBack() {
       this.$router.go(-1);
       this.$store.dispatch("clearFoodCount");
     },
@@ -155,16 +161,24 @@ export default {
       }
     },
     closeModel(type) {
-      if (type == 'discount') {
+      if (type == "discount") {
         this.isDiscount = false;
       } else {
         this.isShowModel = false;
       }
-      
     },
     showModel(type) {
-      if (type == 'discount') {
+      if (type == "discount") {
         this.isDiscount = true;
+        this.$nextTick(() => {
+          if (!this.scroll) {
+            this.scroll = new BScroll(".discount-swiper", {
+              stopPropagation: true
+            });
+          }else {
+            this.scroll.refresh();
+          }
+        });
       } else {
         this.isShowModel = true;
       }
@@ -379,9 +393,15 @@ export default {
     bottom: 0;
     left: 0;
     color: #424242;
-    i{
+    .discount-swiper {
+      width: 100%;
+      height: 1.8rem;
+      overflow: hidden;
+      margin-top: 0.2rem;
+    }
+    i {
       position: absolute;
-      top:0.1rem;
+      top: 0.1rem;
       right: 0.1rem;
       font-size: 0.2rem;
     }
@@ -392,27 +412,25 @@ export default {
       font-weight: bold;
     }
     .discount-content {
-      height: 1.8rem;
-      overflow: auto;
-      margin-top: 0.15rem;
-      li{
+      background-color: #fefefe;
+      li {
         padding-left: 0.1rem;
         height: 0.3rem;
         line-height: 0.3rem;
         font-size: 0.12rem;
         .mini-tag {
-        display: inline-block;
-        width: 0.3rem;
-        height: 0.15rem;
-        line-height: 0.15rem;
-        color: #fefefe;
-        text-align: center;
-        margin-right: 0.1rem;
-      }
-      .activity-content {
-        width: 1.8rem;
-        overflow: hidden;
-      }
+          display: inline-block;
+          width: 0.3rem;
+          height: 0.15rem;
+          line-height: 0.15rem;
+          color: #fefefe;
+          text-align: center;
+          margin-right: 0.1rem;
+        }
+        .activity-content {
+          width: 1.8rem;
+          overflow: hidden;
+        }
       }
     }
   }

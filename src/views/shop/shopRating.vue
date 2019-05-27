@@ -24,7 +24,7 @@
           </div>
           <div class="delivery">
             送达时间：
-            <span class="gray-word">{{1}}分钟</span>
+            <span class="gray-word">{{info.deliveryTime}}分钟</span>
           </div>
         </div>
       </div>
