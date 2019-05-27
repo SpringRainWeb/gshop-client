@@ -7,7 +7,7 @@
       <span :class="{active:!isMessage}" @click="changeLogin(false)">密码登录</span>
     </p>
     <div v-show="isMessage">
-      <cube-input v-model="user" type="phone" placeholder="手机号"></cube-input>
+      <cube-input v-model="user" type="text" :placeholder="'手机号'"></cube-input>
       <cube-input v-model="randomNumber" placeholder="验证码"></cube-input>
       <div class="tips">
         温馨提示：未注册硅谷外卖账号的手机号，登录时将自动注册，且代表已同意
@@ -118,7 +118,8 @@ export default {
             };
             //保存到vuex中
             this.$store.dispatch('recordUser',userInfo);
-            console.log(this.$store.state.userInfo.userName);
+            //保存到session storage 中
+            sessionStorage.setItem("userName",userInfo.userName);
             this.$router.replace('/my');
         } else {
             let msg = result;

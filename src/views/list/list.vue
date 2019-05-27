@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     <header-con></header-con>
-    <div class="is-login" v-if="!isLogin">
+    <div class="is-login" v-if="!userInfo.userName">
       <img src="../../../public/img/order/person.png" alt="">
       <p>登陆后查看外卖订单</p>
       <cube-button :inline='true' @click="goLogin">立即登录</cube-button>
@@ -11,12 +11,17 @@
 
 <script>
 import headerCon from '../../components/header'
+import { mapState } from "vuex";
+
 export default {
   name: 'list',
   data() { 
     return {
-      isLogin:false
+      
     }
+  },
+  computed:{
+    ...mapState(['userInfo'])
   },
   components: {
     headerCon

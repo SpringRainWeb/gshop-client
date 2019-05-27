@@ -65,6 +65,27 @@ export default new Router({
             name: 'login',
             component: () =>
                 import ('./views/login.vue')
+        },
+        {
+            path: '/shop',
+            component: () =>
+                import ('./views/shop/shop.vue'),
+            children: [{
+                path: '/shop/goods',
+                component: () =>
+                    import ('./views/shop/shopGoods.vue')
+            }, {
+                path: '/shop/info',
+                component: () =>
+                    import ('./views/shop/shopInfo.vue')
+            }, {
+                path: '/shop/rating',
+                component: () =>
+                    import ('./views/shop/shopRating.vue')
+            }, {
+                path: '',
+                redirect: '/shop/goods'
+            }]
         }
 
     ]

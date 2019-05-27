@@ -27,58 +27,58 @@ export default {
             title: "甜品饮品"
           },
           {
-            imgSrc: "./img/nav/2.jpg",
-            title: "甜品饮品"
+            imgSrc: "./img/nav/4.jpg",
+            title: "商超便利"
           },
           {
             imgSrc: "./img/nav/3.jpg",
-            title: "甜品饮品"
+            title: "美食"
           },
           {
-            imgSrc: "./img/nav/4.jpg",
-            title: "甜品饮品"
+            imgSrc: "./img/nav/2.jpg",
+            title: "简餐"
+          },
+          {
+            imgSrc: "./img/nav/12.jpg",
+            title: "新店特惠"
           },
           {
             imgSrc: "./img/nav/5.jpg",
-            title: "甜品饮品"
-          },
-          {
-            imgSrc: "./img/nav/6.jpg",
-            title: "甜品饮品"
+            title: "准时达"
           },
           {
             imgSrc: "./img/nav/7.jpg",
-            title: "甜品饮品"
+            title: "预订早餐"
           },
           {
             imgSrc: "./img/nav/8.jpg",
-            title: "甜品饮品"
+            title: "土豪推荐"
           }
         ],
         [
           {
             imgSrc: "./img/nav/9.jpg",
-            title: "甜品饮品"
+            title: "川湘菜"
           },
           {
             imgSrc: "./img/nav/10.jpg",
-            title: "甜品饮品"
+            title: "麻辣烫"
           },
           {
             imgSrc: "./img/nav/11.jpg",
-            title: "甜品饮品"
+            title: "包子粥店"
           },
           {
-            imgSrc: "./img/nav/12.jpg",
-            title: "甜品饮品"
+            imgSrc: "./img/nav/6.jpg",
+            title: "鲜花蛋糕"
           },
           {
             imgSrc: "./img/nav/13.jpg",
-            title: "甜品饮品"
+            title: "日韩料理"
           },
           {
             imgSrc: "./img/nav/14.jpg",
-            title: "甜品饮品"
+            title: "果蔬生鲜"
           }
         ]
       ]
