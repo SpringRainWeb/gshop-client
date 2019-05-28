@@ -4,7 +4,7 @@
       <i class="cubeic-back" @click="goBack"></i>
     </nav>
     <div class="headerContent">
-      <img :src="info.avatar" alt>
+      <img v-lazy="info.avatar" alt>
       <p class="title" @click="showModel('model')">
         <span class="tip">品牌</span>
         <span class="name">

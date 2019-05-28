@@ -10,7 +10,7 @@
             :class="{current:index == currentIndex}"
           >
             <span class="goods-name">
-              <img :src="good.icon" v-if="good.icon" alt>
+              <img v-lazy="good.icon" v-if="good.icon" alt>
               {{good.name}}
             </span>
           </li>
@@ -22,7 +22,7 @@
             <p class="title">{{good.name}}</p>
             <ul class="goods-list">
               <li v-for="(food,index) in good.foods" :key="index" @click="showFood(food)">
-                <img :src="food.icon" alt>
+                <img v-lazy="food.icon" alt>
                 <div class="content">
                   <h2 class="name ellipsis">{{food.name}}</h2>
                   <p class="desc ellipsis" v-if="food.description">{{food.description}}</p>

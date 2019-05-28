@@ -3,7 +3,7 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="(item,index) in shopList" :key="index">
           <div class="shopDetail" v-for="(v,i) in item" :key="i">
-              <img :src="v.imgSrc" alt="">
+              <img v-lazy="v.imgSrc" alt="">
               <span>{{v.title}}</span>
           </div>
       </div>

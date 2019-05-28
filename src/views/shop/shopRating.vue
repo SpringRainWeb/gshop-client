@@ -43,7 +43,7 @@
         <ul class="msg-list">
           <li v-for="(rating,index) in showList" :key="index">
             <div class="content-wrapper clearfix">
-              <img :src="rating.avatar" alt>
+              <img v-lazy="rating.avatar" alt>
               <div class="rating-content">
                 <h1 class="username">
                   {{rating.username}}

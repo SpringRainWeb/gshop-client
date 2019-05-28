@@ -1,41 +1,42 @@
 {
-    "name": "gshop-client",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build"
-    },
-    "dependencies": {
-        "axios": "^0.18.0",
-        "better-scroll": "^1.15.2",
-        "core-js": "^2.6.5",
-        "cube-ui": "~1.12.15",
-        "mockjs": "^1.0.1-beta3",
-        "moment": "^2.24.0",
-        "register-service-worker": "^1.6.2",
-        "swiper": "^4.5.0",
-        "vue": "^2.6.10",
-        "vue-router": "^3.0.3",
-        "vuex": "^3.0.1"
-    },
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.7.0",
-        "@vue/cli-plugin-pwa": "^3.7.0",
-        "@vue/cli-service": "^3.7.0",
-        "node-sass": "^4.9.0",
-        "postcss-px-to-viewport": "^0.0.3",
-        "sass-loader": "^7.1.0",
-        "stylus": "^0.54.5",
-        "stylus-loader": "^3.0.2",
-        "vue-cli-plugin-cube-ui": "^0.2.5",
-        "vue-template-compiler": "^2.5.21",
-        "webpack-bundle-analyzer": "^3.3.2"
-    },
-    "transformModules": {
-        "cube-ui": {
-            "transform": "cube-ui/src/modules/${member}",
-            "kebabCase": true
-        }
+  "name": "gshop-client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "better-scroll": "^1.15.2",
+    "core-js": "^2.6.5",
+    "cube-ui": "~1.12.15",
+    "mockjs": "^1.0.1-beta3",
+    "moment": "^2.24.0",
+    "register-service-worker": "^1.6.2",
+    "swiper": "^4.5.0",
+    "vue": "^2.6.10",
+    "vue-lazyload": "^1.2.6",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-pwa": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "node-sass": "^4.9.0",
+    "postcss-px-to-viewport": "^0.0.3",
+    "sass-loader": "^7.1.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-cube-ui": "^0.2.5",
+    "vue-template-compiler": "^2.5.21",
+    "webpack-bundle-analyzer": "^3.3.2"
+  },
+  "transformModules": {
+    "cube-ui": {
+      "transform": "cube-ui/src/modules/${member}",
+      "kebabCase": true
     }
+  }
 }

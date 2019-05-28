@@ -4,7 +4,7 @@
       <div class="mask"></div>
       <div class="food-detail">
         <i class="cubeic-back" @click="isShow = !isShow"></i>
-        <img :src="food.image" alt>
+        <img v-lazy="food.image" alt>
         <div class="food-content">
           <p class="info ellipsis">{{food.info}}</p>
           <h2 class="name">{{food.name}}</h2>

@@ -10,7 +10,7 @@
     </div>
     <ul>
       <router-link to="/shop" tag="li" v-for="(item,index) in shopList" :key="index" class="shops clearfix">
-        <img :src="item.imgSrc" alt>
+        <img v-lazy="item.imgSrc" alt>
         <div class="shop-detail">
           <h1>
             <span class="tips">品牌</span>

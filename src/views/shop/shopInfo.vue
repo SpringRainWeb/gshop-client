@@ -23,7 +23,7 @@
         <h1>商家实景</h1>
         <cube-slide ref="slide" :data="info.pics" :autoPlay="false" :showDots="false" :options="{scrollY:false}">
           <cube-slide-item v-for="(item, index) in info.pics" :key="index">
-            <img :src="item">
+            <img v-lazy="item">
           </cube-slide-item>
         </cube-slide>
       </div>
