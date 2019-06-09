@@ -113,9 +113,10 @@ export default {
           mask: true
         });
         toast.show();
+        this.$store.dispatch("receiveRatings");
+        this.listScroll.finishPullDown();
+        this.listScroll.refresh();
         setTimeout(() =>{
-          this.$store.dispatch("receiveRatings");
-          this.listScroll.finishPullDown();
           toast.hide();
         },1000)
         
